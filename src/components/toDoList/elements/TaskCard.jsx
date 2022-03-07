@@ -19,10 +19,9 @@ const TaskCard = ({ data, indexToDelete}) => {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        width: "80%",
-        paddingLeft: "10%",
-        paddingRight: "10%",
+        width: "100%",
         border: "1px solid lightgrey",
+        padding: "10px",
     }}>
       <label>
         <input type="checkbox" checked={data.completed} onChange={() => handleChange(indexToDelete)} />
