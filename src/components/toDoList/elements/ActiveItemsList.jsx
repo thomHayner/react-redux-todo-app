@@ -1,5 +1,5 @@
 import React from "react";
-import { useSelector } from 'react-redux';
+import { useSelector } from "react-redux";
 import { selectTodoList } from "../tasksSlice";
 
 import TaskCard from "./TaskCard";
