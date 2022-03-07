@@ -1,10 +1,34 @@
 import React, { useState, useRef } from "react";
-import { useDispatch } from 'react-redux';
+import { useDispatch } from "react-redux";
+import styled from "styled-components";
 
-import { addTaskToList } from './tasksSlice';
+import { addTaskToList } from "./tasksSlice";
+
+const AddTaskForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin-left: -10px;
+  padding: 0px;
+`;
+
+const TaskInput = styled.input`
+  width: 100%;
+`;
+
+const SubmitButton = styled.input`
+  width: 20%;
+  min-width: 68px;
+  background-color: #ED722D;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px;
+`;
 
 const AddNewTaskCard = () => {
-  const [newTask, setNewTask] = useState('');
+  const [newTask, setNewTask] = useState("");
 
   const taskInputRef = useRef(null);
 
@@ -16,45 +40,26 @@ const AddNewTaskCard = () => {
   
   const handleSubmit = () => {
     dispatch(addTaskToList(newTask));
-    setNewTask('');
+    setNewTask("");
   };
 
   return(
-      <form
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "80%",
-          marginLeft: "-10px",
-          padding: "0px",
-        }}
+      <AddTaskForm
         onSubmit={(e) => e.preventDefault()}
       >
-        <input
+        <TaskInput
           ref={taskInputRef}
-          style={{
-            width: "100%",
-          }}
           type="text"
           placeholder="Add todo task..."
           value={newTask}
           onChange={(e) => handleChange(e.target.value)}
         />
-        <input
-          style={{
-            width: "20%",
-            minWidth: "68px",
-            backgroundColor: "#ED722D",
-            color: "white",
-            textTransform: "uppercase",
-            textAlign: "center",
-            padding: "5px",
-          }}
+        <SubmitButton
           type="submit"
           value="Submit"
           onClick={() => handleSubmit()}
         />
-      </form>
+      </AddTaskForm>
   );
 };
 
