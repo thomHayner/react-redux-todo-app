@@ -27,6 +27,8 @@ function App() {
           minWidth: "350px",
           maxWidth: "33vw",
           backgroundColor: "#653BCD",
+          margin: "10px",
+          padding: "10px",
         }}
       >
         <h4>Todo App</h4>
