@@ -40,9 +40,12 @@ const AddNewTaskCard = () => {
     setNewTask(val);
   };
   
-  const handleSubmit = () => {
-    dispatch(addTaskToList(newTask));
-    setNewTask("");
+  const handleSubmit = (e) => {
+    if (newTask) {
+      e.preventDefault()
+      dispatch(addTaskToList(newTask));
+      setNewTask("");
+    };
   };
 
   return(
@@ -54,12 +57,13 @@ const AddNewTaskCard = () => {
           type="text"
           placeholder="Add todo task..."
           value={newTask}
-          onChange={(e) => handleChange(e.target.value)}
+          required
+          onInput={(e) => handleChange(e.target.value)}
         />
         <SubmitButton
           type="submit"
           value="Submit"
-          onClick={() => handleSubmit()}
+          onClick={(e) => handleSubmit(e)}
         />
       </AddTaskForm>
   );
