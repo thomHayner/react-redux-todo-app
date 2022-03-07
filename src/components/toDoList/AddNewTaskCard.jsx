@@ -25,8 +25,8 @@ const AddNewTaskCard = () => {
           display: "flex",
           flexDirection: "column",
           width: "80%",
-          margin: "10px",
-          padding: "10px",
+          marginLeft: "-10px",
+          padding: "0px",
         }}
         onSubmit={(e) => e.preventDefault()}
       >
@@ -40,15 +40,20 @@ const AddNewTaskCard = () => {
           value={newTask}
           onChange={(e) => handleChange(e.target.value)}
         />
-        <button
+        <input
           style={{
-            width: "56px",
+            width: "20%",
+            minWidth: "68px",
+            backgroundColor: "orange",
+            color: "white",
+            textTransform: "uppercase",
+            textAlign: "center",
+            padding: "5px",
           }}
           type="submit"
+          value="Submit"
           onClick={() => handleSubmit()}
-        >
-          Submit
-        </button>
+        />
       </form>
   );
 };

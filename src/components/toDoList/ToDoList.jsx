@@ -7,17 +7,19 @@ const ToDoList = () => {
   return(
     <div
       style={{
+        display: "flex",
+        flexDirection: "column",
         width: "80%",
-        margin: "10px",
-        padding: "10px",
+        marginLeft: "-20px",
+        padding: "0px",
+        rowGap: "20px",
       }}
     >
       <TodoActiveItemsList />
       <div
         style={{
           width: "100%",
-          margin: "10px",
-          borderBottom: "5px dashed lightgrey",
+          borderBottom: "2px dashed lightgrey",
         }}
       />
       <TodoCompletedItemList />

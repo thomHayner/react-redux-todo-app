@@ -28,10 +28,18 @@ function App() {
           maxWidth: "33vw",
           backgroundColor: "#653BCD",
           margin: "10px",
-          padding: "10px",
+          padding: "20px",
+          rowGap: "20px",
         }}
       >
-        <h4>Todo App</h4>
+        <h4
+          style={{
+            color: "lightgrey",
+            textDecorationLine: "underline",
+            margin: "0px",
+            padding: "0px",
+          }}
+        >Todo App</h4>
         <AddNewTaskCard />
         <ToDoList />
       </div>

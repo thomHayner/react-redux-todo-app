@@ -13,7 +13,7 @@ const ActiveItemsList = () => {
         <TaskCard
           key={((i+1)**(i+1))/3}
           data={n}
-          indexToDelete={i}
+          indexToAlter={i}
         />
       :
         <div key={((i+1)**(i+1))/3} />

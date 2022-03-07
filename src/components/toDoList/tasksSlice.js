@@ -1,22 +1,25 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   todoList: [
     {
-      todo: "todo1",
-      completed: false
-    },{
-      todo: "todo2",
+      todo: "Todo 1",
       completed: true
     },{
-      todo: "todo3",
+      todo: "Todo 2",
+      completed: false
+    },{
+      todo: "Todo 3",
+      completed: false
+    },{
+      todo: "Todo 4",
       completed: false
     }
   ]
 };
 
 export const todoSlice = createSlice({
-  name: 'todoList',
+  name: "todoList",
   initialState,
   reducers: {
     addTaskToList: (state, action) => {

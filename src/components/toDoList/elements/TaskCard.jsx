@@ -1,8 +1,8 @@
 import React from "react";
-import {  useDispatch } from 'react-redux';
+import {  useDispatch } from "react-redux";
 import { deleteTaskFromList, updateTodoCheckbox } from "../tasksSlice";
 
-const TaskCard = ({ data, indexToDelete}) => {
+const TaskCard = ({ data, indexToAlter }) => {
   const dispatch = useDispatch();
 
   const handleChange = (i) => {
@@ -23,11 +23,34 @@ const TaskCard = ({ data, indexToDelete}) => {
         border: "1px solid lightgrey",
         padding: "10px",
     }}>
-      <label>
-        <input type="checkbox" checked={data.completed} onChange={() => handleChange(indexToDelete)} />
+      <label
+        style={{
+          color: data.completed ? "lightgrey" : "white",
+          textDecoration: data.completed ? "line-through" : "none",
+        }}
+      >
+        <input 
+          type="checkbox"
+          checked={data.completed}
+          onChange={() => handleChange(indexToAlter)}
+        />
         {data.todo}
       </label>
-      <input type="button" id="delete" value="Delete" onClick={() => handleDelete(indexToDelete)} />
+      <input 
+        type="button"
+        id="delete"
+        value="Delete"
+        onClick={() => handleDelete(indexToAlter)}
+        style={{
+          width: "20%",
+        minWidth: "68px",
+        backgroundColor: "orange",
+        color: "white",
+        textTransform: "uppercase",
+        textAlign: "center",
+        padding: "5px",
+        }}
+      />
     </div>
   );
 };
