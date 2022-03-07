@@ -20,6 +20,7 @@ const ToDoList = () => {
         style={{
           width: "100%",
           borderBottom: "2px dashed lightgrey",
+          marginLeft: "10px",
         }}
       />
       <TodoCompletedItemList />

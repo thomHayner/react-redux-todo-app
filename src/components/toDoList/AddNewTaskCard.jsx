@@ -44,7 +44,7 @@ const AddNewTaskCard = () => {
           style={{
             width: "20%",
             minWidth: "68px",
-            backgroundColor: "orange",
+            backgroundColor: "#ED722D",
             color: "white",
             textTransform: "uppercase",
             textAlign: "center",
