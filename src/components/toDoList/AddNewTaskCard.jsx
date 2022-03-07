@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useDispatch } from 'react-redux';
 
-import { addTaskToList } from '../tasksSlice';
+import { addTaskToList } from './tasksSlice';
 
 const AddNewTaskCard = () => {
   const [newTask, setNewTask] = useState('');

@@ -1,5 +1,5 @@
 import React from 'react';
-import AddNewTaskCard from './components/toDoList/elements/AddNewTaskCard';
+import AddNewTaskCard from './components/toDoList/AddNewTaskCard';
 import ToDoList from './components/toDoList/ToDoList';
 import './App.css';
 
