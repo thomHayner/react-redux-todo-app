@@ -14,8 +14,9 @@ const CardWrapper = styled.div`
 `;
 
 const TodoCheckboxLabel = styled.label`
-  color: data.completed ? lightgrey : white;
-  text-decoration: data.completed ? line-through : none;
+  color: ${props => props.color};
+  text-decoration: ${props => props.decoration};
+  font-weight: 500;
 `;
 
 const DeleteButton = styled.input`
@@ -25,7 +26,9 @@ const DeleteButton = styled.input`
   color: white;
   text-transform: uppercase;
   text-align: center;
+  font-weight: bold;
   padding: 5px;
+  border: 0px;
 `;
 
 const TaskCard = ({ data, indexToAlter }) => {
@@ -41,7 +44,10 @@ const TaskCard = ({ data, indexToAlter }) => {
 
   return(
     <CardWrapper>
-      <TodoCheckboxLabel>
+      <TodoCheckboxLabel
+        color={data.completed ? "lightgrey" : "white"}
+        decoration={data.completed ? "line-through" : "none"}
+      >
         <input 
           type="checkbox"
           checked={data.completed}
