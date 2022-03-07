@@ -8,10 +8,18 @@ const ToDoList = () => {
     <div
       style={{
         width: "80%",
+        margin: "10px",
+        padding: "10px",
       }}
     >
       <TodoActiveItemsList />
-      <br />
+      <div
+        style={{
+          width: "100%",
+          margin: "10px",
+          borderBottom: "5px dashed lightgrey",
+        }}
+      />
       <TodoCompletedItemList />
     </div>
   )
