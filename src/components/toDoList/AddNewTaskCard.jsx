@@ -10,6 +10,7 @@ const AddTaskForm = styled.form`
   width: 80%;
   margin-left: -10px;
   padding: 0px;
+  row-gap: 5px;
 `;
 
 const TaskInput = styled.input`
@@ -25,6 +26,7 @@ const SubmitButton = styled.input`
   text-transform: uppercase;
   text-align: center;
   padding: 5px;
+  border: 0px;
 `;
 
 const AddNewTaskCard = () => {
